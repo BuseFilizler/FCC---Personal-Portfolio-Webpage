@@ -1,0 +1,346 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: monospace;
+    box-sizing: inherit;
+    color: #f6eedf;
+}
+
+html {
+    font-size: 100%;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    background-color: #f6eedf;
+}
+
+@media (max-width: 61.25em) {
+    html {
+        font-size: 58%;
+    }
+}
+
+/* scrollbar*/
+
+/* width */
+::-webkit-scrollbar {
+    width: 12px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #1f1e1c; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #c76aef; 
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #1f1e1c; 
+  }
+
+/*Navbar start*/
+
+nav#navbar {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    align-self: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #c76aef;
+    z-index: 1;
+}
+
+ul.nav-list {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 100%;
+    list-style: none;
+    text-decoration: none;
+    gap: 35px;
+    color: #f6eedf;
+    margin-right: 1.5rem;
+    font-size: 1.2vw;
+    font-weight: 700;
+    padding: 1.5rem;
+}
+
+a {
+    text-decoration: none;
+}
+
+li:hover {
+    border-bottom: 1px solid #1f1e1c;
+}
+
+/*Navbar End*/
+
+/*First Section Start*/
+
+section#welcome-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 30px;
+    height: 100vh;
+    background-color: #1f1e1c;
+}
+
+@media screen and (max-width:300px) {
+    section#welcome-section {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+}
+
+section#welcome-section:before {
+    content: ' ';
+    display: block;
+    opacity: 0.1;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(https://r.resimlink.com/nN02tux.jpg);
+    background-repeat: no-repeat;
+    background-blend-mode: lighten;
+    background-size: cover;
+}
+
+section.left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+img.logo {
+    width: 32vw;
+    animation: bounce 3.5s infinite alternate;
+    padding: 50px;
+}
+
+
+
+@keyframes bounce {
+    0% {
+        transform: scale(1);
+    }
+
+    10% {
+        transform: scale(1.2 0.6) translateX(5%) translateY(5%);
+    }
+
+    100% {
+        transform: scale(1) translateX(10%) translateY(10%);
+    }
+}
+
+p,
+h1 {
+    font-size: 5vw;
+    font-weight: 600;
+}
+
+span.buse {
+    text-shadow: -4px 0px 1px #c76aef, 4px 1px 0px #458782;
+    font-weight: 700;
+    font-size: 5.5vw;
+    letter-spacing: 5px;
+}
+
+p.fe {
+    font-size: 2vw;
+    font-weight: 600;
+}
+
+/*First Section End*/
+
+/*Second Section Start*/
+/* Grid*/
+
+section#projects {
+    width: 100%;
+    background-color: #747876;
+    padding-bottom: 30px;
+}
+
+h2.projects-section-header {
+    padding-top: 50px;
+    text-align: center;
+    font-size: 4.5vw;
+
+}
+
+div.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-gap: 4rem;
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    margin-bottom: 6rem;
+}
+
+.project-tile {
+    background: rgb(136, 134, 134);
+    box-shadow: 1px 1px 2px rgb(0 0 0 / 50%);
+    border-radius: 2px;
+    text-decoration: none;
+    color: rgb(16, 15, 15);
+    margin: 15px;
+    border-radius: 30px;
+}
+
+.project-image {
+    height: calc(100% - 6.8rem);
+    width: 100%;
+    display: block;
+    border-radius: 30px;
+}
+
+p.project-p {
+    font-size: 20px;
+    text-align: center;
+    padding: 2rem 0.5rem;
+    font-family: monospace;
+    border-bottom: 1px solid #458782;
+    z-index: 1;
+}
+
+a.project-tile:hover {
+    background-color: #53515354;
+    border-radius: 30px;
+}
+
+img.project-image:hover {
+    border-radius: 30px;
+    background-color: #c76aef54;
+}
+
+p.project-p {
+    border-bottom: 1px solid #458782;
+}
+
+a.btn {
+    font-size: 2rem;
+    background: rgb(136, 134, 134);
+    transition: background 0.3s ease-out;
+    color: #f6eedf;
+    display: inline-block;
+    padding-top: 1rem;
+    border-radius: 2px;
+    width: 250px;
+    height: 60px;
+    text-align: center;
+    border-radius: 30px;
+}
+
+div.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    padding-bottom: 30px;
+}
+
+a.btn:hover {
+    background-color: #c76aef;
+    color: #1f1e1c;
+}
+
+section#tech {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 60%;
+    background-color: #1f1e1c;
+}
+
+img.img-tech {
+    width: 50%;
+    padding: 10px;
+}
+
+section#contact {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 80px;
+    height: 100vh;
+    background-color: #f6eedf
+}
+
+@import url("https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900");
+
+.content {
+    position: relative;
+    font-family: "Poppins", sans-serif;
+}
+
+.content h2 {
+    color: #fff;
+    font-size: 5vw;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    font-family: "Poppins", sans-serif;
+}
+
+.content h2:nth-child(1) {
+    color: transparent;
+    -webkit-text-stroke: 2px #727271;
+}
+
+.content h2:nth-child(2) {
+    color: #c76aef;
+    animation: animate 3s ease-in-out infinite;
+}
+
+@keyframes animate {
+
+    0%,
+    100% {
+        clip-path: polygon(0% 45%,
+                16% 44%,
+                33% 50%,
+                54% 60%,
+                70% 61%,
+                84% 59%,
+                100% 52%,
+                100% 100%,
+                0% 100%);
+    }
+
+    50% {
+        clip-path: polygon(0% 60%,
+                15% 65%,
+                34% 66%,
+                51% 62%,
+                67% 50%,
+                84% 45%,
+                100% 46%,
+                100% 100%,
+                0% 100%);
+    }
+}
+
+span.alt {
+    opacity: 0;
+}
+
+
+  
